@@ -10,8 +10,17 @@ An AI-driven IPsec protocol analysis platform for testbed control, packet captur
 - `docs/`: Project documentation.
 - `dataset/`: Directory for storing captured PCAPs and extracted features (ignored in git).
 
-## Environment Setup
-See [Development Guide](docs/development.md) for details on setting up the local Python virtual environment and dependencies.
+## Development Setup
+
+For complete environment setup on a new Ubuntu/WSL2 machine (cloning, Python venv, system packages, SSH keys, GitHub configuration, and safety rules), see the **[Setup Guide](docs/setup.md)**.
+
+Quick start with the helper script:
+
+```bash
+./scripts/setup_dev.sh
+```
+
+For ongoing development reference (testing, dependencies), see [docs/development.md](docs/development.md).
 
 ## IPsec Testbed
 The project uses Linux network namespaces to simulate a complete IPsec topology on a single host. 
