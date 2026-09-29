@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@theme {
+  --color-soc-dark: #0B0C0D;
+  --color-soc-panel: #111315;
+  --color-soc-border: #25282C;
+  --color-soc-text: #969CA5;
+  --color-soc-text-hover: #E7E9EC;
+  --color-soc-accent: #3b82f6;
+  --color-soc-accent-hover: #60a5fa;
+
+  --animate-fade-in: fade-in 1.5s ease-out;
+  --animate-fade-in-up: fade-in-up 1s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-fade-in-down: fade-in-down 1s cubic-bezier(0.16, 1, 0.3, 1);
+  
+  --animate-pulse-slow: pulse-opacity 4s ease-in-out infinite;
+  --animate-camera-push: camera-push 25s ease-out forwards;
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fade-in-down {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes pulse-opacity {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 0.8; }
+  }
+  @keyframes camera-push {
+    0% { transform: scale(1.0); }
+    100% { transform: scale(1.1); }
+  }
+}
+
+@layer base {
+  body {
+    background-color: var(--color-soc-dark);
+    color: var(--color-soc-text);
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+@media print {
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+  
+  /* Hide sidebar and navigation */
+  nav, .sidebar, .shell-header, .hide-on-print {
+    display: none !important;
+  }
+  
+  /* Adjust main container to occupy full width/height without padding/margins */
+  .shell-main {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  .print-surface {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+  
+  .print-text {
+    color: black !important;
+  }
+
+  .print-border {
+    border-color: #ddd !important;
+  }
+
+  .print-muted {
+    color: #555 !important;
+  }
+
+  .print-accent {
+    color: #2563eb !important;
+  }
+
+  .print-bg-subtle {
+    background: #f9f9f9 !important;
+  }
+  
+  @page {
+    margin: 1.5cm;
+  }
+}
