@@ -72,17 +72,26 @@ export const Captures: React.FC = () => {
             
             setUploadStatus('ANALYZING');
             
-            const stages: AnalysisStage[] = [
-                'CAPTURE_VERIFIED',
-                'IPSEC_ANALYSIS',
-                'TRAFFIC_ANALYSIS',
-                'SECURITY_ASSESSMENT',
-                'REPORT_GENERATED'
+            // Target timings:
+            // Capture Received: ~600ms
+            // Capture Verified: ~800ms
+            // IPsec Analysis: ~1100ms
+            // Traffic Analysis: ~1000ms
+            // Security Assessment: ~900ms
+            // Report Generated: ~700ms
+
+            const pipelineSteps: { stage: AnalysisStage, duration: number }[] = [
+                { stage: 'CAPTURE_RECEIVED', duration: 600 },
+                { stage: 'CAPTURE_VERIFIED', duration: 800 },
+                { stage: 'IPSEC_ANALYSIS', duration: 1100 },
+                { stage: 'TRAFFIC_ANALYSIS', duration: 1000 },
+                { stage: 'SECURITY_ASSESSMENT', duration: 900 },
+                { stage: 'REPORT_GENERATED', duration: 700 }
             ];
-            
-            for (const stage of stages) {
-                setAnalysisStage(stage);
-                await new Promise(r => setTimeout(r, 450));
+
+            for (const step of pipelineSteps) {
+                setAnalysisStage(step.stage);
+                await new Promise(r => setTimeout(r, step.duration));
             }
             
             setUploadStatus('SUCCESS');
