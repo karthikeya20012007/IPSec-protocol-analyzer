@@ -14,6 +14,23 @@ export const Traffic: React.FC = () => {
 
     const s = currentScenario;
 
+    const hasInferred = s.traffic_flows.some(f => f.is_inferred);
+    
+    if (s.traffic_flows.length === 0 || (s.scenario_id === 'EX01' && !hasInferred)) {
+        return (
+            <div className="pt-12">
+                <EmptyState 
+                    title={s.scenario_id === 'EX01' ? "Insufficient Evidence" : "No Classified Traffic"}
+                    message={s.scenario_id === 'EX01' 
+                        ? "Additional traffic conclusions cannot be derived from this capture. Only basic protocol evidence is available."
+                        : "No application-level traffic classification is available for this capture."
+                    }
+                />
+            </div>
+        );
+    }
+
+
     const analytics = useMemo(() => {
         const classCounts: Record<string, { count: number; bytes: number; totalConf: number }> = {};
         let minConf = 1, maxConf = 0, totalConf = 0;

@@ -6,6 +6,7 @@ import { SeverityBadge } from '../components/common/SeverityBadge';
 import { Metric } from '../components/common/MetricCard';
 import { DetailDrawer } from '../components/common/DetailDrawer';
 import type { SecurityFinding } from '../types';
+import { EmptyState } from '../components/common/EmptyState';
 
 export const Security: React.FC = () => {
     const { currentScenario } = useAppContext();
@@ -21,6 +22,28 @@ export const Security: React.FC = () => {
 
     const s = currentScenario;
     const findings = s.findings || [];
+
+    if (findings.length === 0) {
+        if (s.scenario_id === 'EX01') {
+            return (
+                <div className="pt-12">
+                    <EmptyState 
+                        title="Insufficient Evidence" 
+                        message="Additional security conclusions cannot be derived from this capture because it does not contain enough observable protocol information."
+                    />
+                </div>
+            );
+        }
+        return (
+            <div className="pt-12">
+                <EmptyState 
+                    title="No Security Findings" 
+                    message="No security findings were identified for this capture."
+                />
+            </div>
+        );
+    }
+
 
     const criticalCount = findings.filter(f => f.severity === 'CRITICAL').length;
     const highCount = findings.filter(f => f.severity === 'HIGH').length;

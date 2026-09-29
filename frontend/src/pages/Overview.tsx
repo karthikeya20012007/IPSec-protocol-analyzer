@@ -115,7 +115,10 @@ export const Overview: React.FC = () => {
                         {distributionData.length > 0 ? (
                             <DonutChart data={distributionData} nameKey="name" dataKey="bytes" />
                         ) : (
-                            <div className="absolute inset-0 flex items-center justify-center text-sm text-soc-text">No traffic flows analyzed</div>
+                            <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                                <span className="text-sm font-medium text-[#E7E9EC] uppercase tracking-widest mb-1">Insufficient Evidence</span>
+                                <span className="text-xs text-[#969CA5]">Additional traffic conclusions cannot be derived from this capture.</span>
+                            </div>
                         )}
                     </div>
                 </AnalyticalCard>
@@ -124,8 +127,15 @@ export const Overview: React.FC = () => {
                     <SectionHeader title="Security Findings" subtitle="Detected vulnerabilities and misconfigurations" />
                     <div className="flex-1 overflow-y-auto custom-scrollbar pr-2 mt-4 space-y-4">
                         {s.findings.length === 0 ? (
-                            <div className="flex items-center justify-center h-48 border border-dashed border-white/5 rounded-sm">
-                                <span className="text-emerald-500/80 text-sm">No security findings identified.</span>
+                            <div className="flex flex-col items-center justify-center h-48 border border-dashed border-[#25282C] rounded-sm bg-[#111315]">
+                                <span className="text-[#E7E9EC] text-sm font-medium uppercase tracking-widest mb-1">
+                                    {s.scenario_id === 'EX01' ? 'Insufficient Evidence' : 'No Security Findings'}
+                                </span>
+                                <span className="text-xs text-[#969CA5] text-center px-4">
+                                    {s.scenario_id === 'EX01' 
+                                        ? 'Security conclusions cannot be derived from this capture.' 
+                                        : 'No security findings identified.'}
+                                </span>
                             </div>
                         ) : (
                             s.findings.map(f => (
