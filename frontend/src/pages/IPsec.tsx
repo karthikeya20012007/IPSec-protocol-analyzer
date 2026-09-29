@@ -44,10 +44,10 @@ export const IPsec: React.FC = () => {
 
     return (
         <div className="space-y-6">
-                        <div className="mb-6 border-b border-[#25282C] pb-5">
-                <div className="text-xs uppercase tracking-widest text-[#666C75] font-medium mb-1">IPSEC</div>
-                <h2 className="text-2xl font-semibold text-[#E7E9EC] tracking-wide mb-1">IPsec Protocol Analysis</h2>
-                <p className="text-sm text-[#969CA5]">Cryptographic context and state</p>
+                        <div className="mb-6 border-b border-[#202326] pb-5">
+                <div className="text-xs uppercase tracking-widest text-[#636C73] font-medium mb-1">IPSEC</div>
+                <h2 className="text-2xl font-semibold text-[#E5E7EB] tracking-wide mb-1">IPsec Protocol Analysis</h2>
+                <p className="text-sm text-[#8B9299]">Cryptographic context and state</p>
             </div>
 
             {/* Context Bar */}

@@ -96,40 +96,40 @@ export const Traffic: React.FC = () => {
     return (
         <div className="space-y-4">
             {/* Page Header */}
-                        <div className="mb-6 border-b border-[#25282C] pb-5">
-                <div className="text-xs uppercase tracking-widest text-[#666C75] font-medium mb-1">TRAFFIC</div>
-                <h2 className="text-2xl font-semibold text-[#E7E9EC] tracking-wide mb-1">Traffic Intelligence</h2>
-                <p className="text-sm text-[#969CA5]">Encrypted traffic classification and flow behavior</p>
+                        <div className="mb-6 border-b border-[#202326] pb-5">
+                <div className="text-xs uppercase tracking-widest text-[#636C73] font-medium mb-1">TRAFFIC</div>
+                <h2 className="text-2xl font-semibold text-[#E5E7EB] tracking-wide mb-1">Traffic Intelligence</h2>
+                <p className="text-sm text-[#8B9299]">Encrypted traffic classification and flow behavior</p>
             </div>
 
             {/* Summary Strip */}
             <div className="grid grid-cols-4 gap-3">
-                <div className="bg-[#111315] border border-[#25282C] rounded-sm px-4 py-3">
-                    <div className="text-xs uppercase tracking-wider text-[#969CA5] font-medium mb-1.5">Total Flows</div>
-                    <div className="text-2xl font-mono font-semibold text-[#E7E9EC]">{s.traffic_flows.length}</div>
+                <div className="bg-[#0D0F10] border border-[#202326] rounded-sm px-4 py-3">
+                    <div className="text-xs uppercase tracking-wider text-[#8B9299] font-medium mb-1.5">Total Flows</div>
+                    <div className="text-2xl font-mono font-semibold text-[#E5E7EB]">{s.traffic_flows.length}</div>
                 </div>
-                <div className="bg-[#111315] border border-[#25282C] rounded-sm px-4 py-3">
-                    <div className="text-xs uppercase tracking-wider text-[#969CA5] font-medium mb-1.5">Applications</div>
-                    <div className="text-2xl font-mono font-semibold text-[#E7E9EC]">{analytics.classCount}</div>
+                <div className="bg-[#0D0F10] border border-[#202326] rounded-sm px-4 py-3">
+                    <div className="text-xs uppercase tracking-wider text-[#8B9299] font-medium mb-1.5">Applications</div>
+                    <div className="text-2xl font-mono font-semibold text-[#E5E7EB]">{analytics.classCount}</div>
                 </div>
-                <div className="bg-[#111315] border border-[#25282C] rounded-sm px-4 py-3">
-                    <div className="text-xs uppercase tracking-wider text-[#969CA5] font-medium mb-1.5">Mean AI Confidence</div>
-                    <div className="text-2xl font-mono font-semibold text-[#E7E9EC]">{analytics.avgConf}<span className="text-sm text-soc-text">%</span></div>
+                <div className="bg-[#0D0F10] border border-[#202326] rounded-sm px-4 py-3">
+                    <div className="text-xs uppercase tracking-wider text-[#8B9299] font-medium mb-1.5">Mean AI Confidence</div>
+                    <div className="text-2xl font-mono font-semibold text-[#E5E7EB]">{analytics.avgConf}<span className="text-sm text-soc-text">%</span></div>
                 </div>
-                <div className="bg-[#111315] border border-[#25282C] rounded-sm px-4 py-3">
-                    <div className="text-xs uppercase tracking-wider text-[#969CA5] font-medium mb-1.5">Encrypted Coverage</div>
-                    <div className="text-2xl font-mono font-semibold text-[#E7E9EC]">100<span className="text-sm text-soc-text">%</span></div>
+                <div className="bg-[#0D0F10] border border-[#202326] rounded-sm px-4 py-3">
+                    <div className="text-xs uppercase tracking-wider text-[#8B9299] font-medium mb-1.5">Encrypted Coverage</div>
+                    <div className="text-2xl font-mono font-semibold text-[#E5E7EB]">100<span className="text-sm text-soc-text">%</span></div>
                 </div>
             </div>
 
             {/* Analytics Row: Distribution + Scatter */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                 {/* Application Distribution */}
-                <div className="bg-[#111315] border border-[#25282C] rounded-sm p-4">
+                <div className="bg-[#0D0F10] border border-[#202326] rounded-sm p-4">
                     <div className="flex items-baseline justify-between mb-3">
                         <div>
-                            <h3 className="text-sm font-semibold text-[#E7E9EC] tracking-wide">Application Distribution</h3>
-                            <p className="text-sm text-[#969CA5] mt-1">Flow count by inferred application</p>
+                            <h3 className="text-sm font-semibold text-[#E5E7EB] tracking-wide">Application Distribution</h3>
+                            <p className="text-sm text-[#8B9299] mt-1">Flow count by inferred application</p>
                         </div>
                         <span className="text-xs text-soc-text uppercase tracking-widest">{analytics.distData.length} classes</span>
                     </div>
@@ -143,11 +143,11 @@ export const Traffic: React.FC = () => {
                 </div>
 
                 {/* Flow Behavior Scatter */}
-                <div className="bg-[#111315] border border-[#25282C] rounded-sm p-4">
+                <div className="bg-[#0D0F10] border border-[#202326] rounded-sm p-4">
                     <div className="flex items-baseline justify-between mb-3">
                         <div>
-                            <h3 className="text-sm font-semibold text-[#E7E9EC] tracking-wide">Flow Behavior</h3>
-                            <p className="text-sm text-[#969CA5] mt-1">Flow duration vs packet volume</p>
+                            <h3 className="text-sm font-semibold text-[#E5E7EB] tracking-wide">Flow Behavior</h3>
+                            <p className="text-sm text-[#8B9299] mt-1">Flow duration vs packet volume</p>
                         </div>
                         <span className="text-xs text-soc-text uppercase tracking-widest">{s.traffic_flows.length} points</span>
                     </div>
@@ -163,11 +163,11 @@ export const Traffic: React.FC = () => {
             </div>
 
             {/* Traffic Activity (Timeline) */}
-            <div className="bg-[#111315] border border-[#25282C] rounded-sm p-4">
+            <div className="bg-[#0D0F10] border border-[#202326] rounded-sm p-4">
                 <div className="flex items-baseline justify-between mb-3">
                     <div>
-                        <h3 className="text-sm font-semibold text-[#E7E9EC] tracking-wide">Traffic Activity</h3>
-                        <p className="text-sm text-[#969CA5] mt-1">Encrypted traffic volume over capture timeline</p>
+                        <h3 className="text-sm font-semibold text-[#E5E7EB] tracking-wide">Traffic Activity</h3>
+                        <p className="text-sm text-[#8B9299] mt-1">Encrypted traffic volume over capture timeline</p>
                     </div>
                     <span className="text-xs text-soc-text uppercase tracking-widest">{s.traffic_timeline?.length || 0} points</span>
                 </div>
@@ -183,7 +183,7 @@ export const Traffic: React.FC = () => {
             {/* Intelligence Row: Confidence + Characteristics */}
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-4">
                 {/* Classification Confidence */}
-                <div className="lg:col-span-3 bg-[#111315] border border-[#25282C] rounded-sm p-4">
+                <div className="lg:col-span-3 bg-[#0D0F10] border border-[#202326] rounded-sm p-4">
                     <h3 className="text-xs font-medium text-white uppercase tracking-widest mb-3">Classification Confidence</h3>
                     <div className="space-y-2.5">
                         {analytics.confByApp.map(c => (
@@ -202,7 +202,7 @@ export const Traffic: React.FC = () => {
                             </div>
                         ))}
                     </div>
-                    <div className="flex gap-6 mt-4 pt-3 border-t border-[#25282C] text-sm text-soc-text">
+                    <div className="flex gap-6 mt-4 pt-3 border-t border-[#202326] text-sm text-soc-text">
                         <span>Min: <span className="text-white font-mono">{analytics.minConf}%</span></span>
                         <span>Mean: <span className="text-white font-mono">{analytics.avgConf}%</span></span>
                         <span>Max: <span className="text-white font-mono">{analytics.maxConf}%</span></span>
@@ -210,7 +210,7 @@ export const Traffic: React.FC = () => {
                 </div>
 
                 {/* Traffic Characteristics */}
-                <div className="lg:col-span-2 bg-[#111315] border border-[#25282C] rounded-sm p-4">
+                <div className="lg:col-span-2 bg-[#0D0F10] border border-[#202326] rounded-sm p-4">
                     <h3 className="text-xs font-medium text-white uppercase tracking-widest mb-4">Traffic Characteristics</h3>
                     <div className="space-y-4">
                         <div className="flex justify-between items-baseline">
@@ -242,11 +242,11 @@ export const Traffic: React.FC = () => {
             </div>
 
             {/* Flow Investigation Table */}
-            <div className="bg-[#111315] border border-[#25282C] rounded-sm">
-                <div className="px-4 py-3 border-b border-[#25282C] flex items-center justify-between">
+            <div className="bg-[#0D0F10] border border-[#202326] rounded-sm">
+                <div className="px-4 py-3 border-b border-[#202326] flex items-center justify-between">
                     <div>
-                        <h3 className="text-sm font-semibold text-[#E7E9EC] tracking-wide">Observable Flows</h3>
-                        <p className="text-sm text-[#969CA5] mt-1">{s.traffic_flows.length} flows · Click to inspect</p>
+                        <h3 className="text-sm font-semibold text-[#E5E7EB] tracking-wide">Observable Flows</h3>
+                        <p className="text-sm text-[#8B9299] mt-1">{s.traffic_flows.length} flows · Click to inspect</p>
                     </div>
                     <div className="flex space-x-2">
                         <button className="text-sm uppercase tracking-widest text-soc-text px-2 py-1 bg-white/5 border border-white/10 rounded-sm hover:bg-white/10 transition-colors">Export</button>
@@ -256,15 +256,15 @@ export const Traffic: React.FC = () => {
                 <div className="overflow-x-auto custom-scrollbar">
                     <table className="w-full text-left">
                         <thead>
-                            <tr className="border-b border-[#25282C] bg-[#0B0C0D]">
-                                <th className="py-2.5 px-4 text-xs uppercase tracking-widest text-[#666C75] font-medium whitespace-nowrap">Flow</th>
-                                <th className="py-2.5 px-4 text-xs uppercase tracking-widest text-[#666C75] font-medium whitespace-nowrap">Protocol</th>
-                                <th className="py-2.5 px-4 text-xs uppercase tracking-widest text-[#666C75] font-medium whitespace-nowrap">Application</th>
-                                <th className="py-2.5 px-4 text-xs uppercase tracking-widest text-[#666C75] font-medium whitespace-nowrap">Confidence</th>
-                                <th className="py-2.5 px-4 text-xs uppercase tracking-widest text-[#666C75] font-medium whitespace-nowrap">Duration</th>
-                                <th className="py-2.5 px-4 text-xs uppercase tracking-widest text-[#666C75] font-medium whitespace-nowrap">Packets</th>
-                                <th className="py-2.5 px-4 text-xs uppercase tracking-widest text-[#666C75] font-medium whitespace-nowrap">Throughput</th>
-                                <th className="py-2.5 px-4 text-xs uppercase tracking-widest text-[#666C75] font-medium whitespace-nowrap"></th>
+                            <tr className="border-b border-[#202326] bg-[#080909]">
+                                <th className="py-2.5 px-4 text-xs uppercase tracking-widest text-[#636C73] font-medium whitespace-nowrap">Flow</th>
+                                <th className="py-2.5 px-4 text-xs uppercase tracking-widest text-[#636C73] font-medium whitespace-nowrap">Protocol</th>
+                                <th className="py-2.5 px-4 text-xs uppercase tracking-widest text-[#636C73] font-medium whitespace-nowrap">Application</th>
+                                <th className="py-2.5 px-4 text-xs uppercase tracking-widest text-[#636C73] font-medium whitespace-nowrap">Confidence</th>
+                                <th className="py-2.5 px-4 text-xs uppercase tracking-widest text-[#636C73] font-medium whitespace-nowrap">Duration</th>
+                                <th className="py-2.5 px-4 text-xs uppercase tracking-widest text-[#636C73] font-medium whitespace-nowrap">Packets</th>
+                                <th className="py-2.5 px-4 text-xs uppercase tracking-widest text-[#636C73] font-medium whitespace-nowrap">Throughput</th>
+                                <th className="py-2.5 px-4 text-xs uppercase tracking-widest text-[#636C73] font-medium whitespace-nowrap"></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -275,10 +275,10 @@ export const Traffic: React.FC = () => {
                                     onClick={() => setSelectedFlow(f)}
                                 >
                                     <td className="py-3 px-4 font-mono text-[#3b82f6] text-sm transition-colors whitespace-nowrap">{f.id}</td>
-                                    <td className="py-3 px-4 text-[#969CA5] text-sm whitespace-nowrap">{s.ipsec.protocol}</td>
+                                    <td className="py-3 px-4 text-[#8B9299] text-sm whitespace-nowrap">{s.ipsec.protocol}</td>
                                     <td className="py-2 px-4 whitespace-nowrap">
                                         <div className="flex items-center space-x-2">
-                                            <span className="text-[#E7E9EC] text-sm">{f.classification}</span>
+                                            <span className="text-[#E5E7EB] text-sm">{f.classification}</span>
                                             <span className={`text-xs uppercase tracking-widest px-1.5 py-0.5 rounded-sm border ${
                                                 f.is_inferred
                                                     ? 'bg-soc-accent/10 text-soc-accent border-soc-accent/20'
@@ -293,9 +293,9 @@ export const Traffic: React.FC = () => {
                                             {(f.confidence * 100).toFixed(0)}%
                                         </span>
                                     </td>
-                                    <td className="py-3 px-4 font-mono text-[13px] text-[#E7E9EC] whitespace-nowrap">{f.duration_sec.toFixed(1)}s</td>
-                                    <td className="py-3 px-4 font-mono text-[13px] text-[#E7E9EC] whitespace-nowrap">{f.packets.toLocaleString()}</td>
-                                    <td className="py-3 px-4 font-mono text-[13px] text-[#E7E9EC] whitespace-nowrap">{(f.throughput_bps / 1000).toFixed(1)} Kbps</td>
+                                    <td className="py-3 px-4 font-mono text-[13px] text-[#E5E7EB] whitespace-nowrap">{f.duration_sec.toFixed(1)}s</td>
+                                    <td className="py-3 px-4 font-mono text-[13px] text-[#E5E7EB] whitespace-nowrap">{f.packets.toLocaleString()}</td>
+                                    <td className="py-3 px-4 font-mono text-[13px] text-[#E5E7EB] whitespace-nowrap">{(f.throughput_bps / 1000).toFixed(1)} Kbps</td>
                                     <td className="py-2 px-4 whitespace-nowrap">
                                         <span className="text-xs text-soc-accent opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-widest">Inspect →</span>
                                     </td>
@@ -317,7 +317,7 @@ export const Traffic: React.FC = () => {
                     return (
                         <div className="space-y-6">
                             {/* Identity */}
-                            <div className="bg-[#0B0C0D] border border-[#25282C] rounded-sm p-4">
+                            <div className="bg-[#080909] border border-[#202326] rounded-sm p-4">
                                 <div className="text-xs text-soc-text uppercase tracking-widest mb-1">Flow ID</div>
                                 <div className="font-mono text-white text-sm mb-3">{selectedFlow.id}</div>
                                 <div className="flex items-center gap-3">
@@ -350,7 +350,7 @@ export const Traffic: React.FC = () => {
 
                             {/* Behavior Metrics */}
                             <div>
-                                <h4 className="text-xs uppercase tracking-widest text-soc-text mb-3 pb-2 border-b border-[#25282C]">Behavior</h4>
+                                <h4 className="text-xs uppercase tracking-widest text-soc-text mb-3 pb-2 border-b border-[#202326]">Behavior</h4>
                                 <div className="grid grid-cols-2 gap-4">
                                     <Metric label="Duration" value={`${selectedFlow.duration_sec.toFixed(1)}s`} />
                                     <Metric label="Total Packets" value={selectedFlow.packets.toLocaleString()} />
@@ -367,7 +367,7 @@ export const Traffic: React.FC = () => {
 
                             {/* Signals */}
                             <div>
-                                <h4 className="text-xs uppercase tracking-widest text-soc-text mb-3 pb-2 border-b border-[#25282C]">Observable Signals</h4>
+                                <h4 className="text-xs uppercase tracking-widest text-soc-text mb-3 pb-2 border-b border-[#202326]">Observable Signals</h4>
                                 <ul className="text-sm text-soc-text-hover space-y-2 font-mono">
                                     <li className="flex items-center space-x-2"><span className="text-soc-accent text-xs">▸</span><span>Packet size distribution</span></li>
                                     <li className="flex items-center space-x-2"><span className="text-soc-accent text-xs">▸</span><span>Inter-arrival time variance</span></li>

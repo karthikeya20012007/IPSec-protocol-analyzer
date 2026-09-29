@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 @theme {
-  --color-soc-dark: #0B0C0D;
-  --color-soc-panel: #111315;
-  --color-soc-border: #25282C;
-  --color-soc-text: #969CA5;
-  --color-soc-text-hover: #E7E9EC;
+  --color-soc-dark: #080909;
+  --color-soc-panel: #0D0F10;
+  --color-soc-border: #202326;
+  --color-soc-text: #8B9299;
+  --color-soc-text-hover: #E5E7EB;
   --color-soc-accent: #3b82f6;
   --color-soc-accent-hover: #60a5fa;
 

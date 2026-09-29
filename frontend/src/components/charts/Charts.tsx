@@ -7,7 +7,7 @@ const COLORS = ['#3b82f6', '#10b981', '#f59e0b', '#8b5cf6', '#06b6d4', '#64748b'
 const CustomTooltip = ({ active, payload, label }: any) => {
     if (active && payload && payload.length) {
         return (
-            <div className="bg-[#111315] border border-[#25282C] px-3 py-2.5 rounded shadow-2xl text-xs">
+            <div className="bg-[#0D0F10] border border-[#202326] px-3 py-2.5 rounded shadow-2xl text-xs">
                 <div className="text-white font-medium mb-1.5">{label || payload[0]?.payload?.name || payload[0]?.name}</div>
                 {payload.map((entry: any, index: number) => (
                     <div key={`item-${index}`} className="flex items-center space-x-2 text-xs">
@@ -28,7 +28,7 @@ const ScatterTooltip = ({ active, payload }: any) => {
         const d = payload[0]?.payload;
         if (!d) return null;
         return (
-            <div className="bg-[#111315] border border-[#25282C] px-4 py-3 rounded shadow-2xl text-xs space-y-1.5">
+            <div className="bg-[#0D0F10] border border-[#202326] px-4 py-3 rounded shadow-2xl text-xs space-y-1.5">
                 <div className="text-white font-medium text-sm mb-2">{d.classification}</div>
                 <div className="flex justify-between gap-6"><span className="text-[#a1a1aa]">Flow ID</span><span className="text-white font-mono">{d.id}</span></div>
                 <div className="flex justify-between gap-6"><span className="text-[#a1a1aa]">Duration</span><span className="text-white font-mono">{d.duration_sec}s</span></div>

@@ -33,48 +33,48 @@ export const Overview: React.FC = () => {
     return (
         <div className="space-y-6">
                         <div className="mb-8">
-                <div className="text-xs uppercase tracking-widest text-[#666C75] font-medium mb-1">OVERVIEW</div>
-                <h2 className="text-2xl font-semibold text-[#E7E9EC] tracking-wide mb-1">Security Analysis Overview</h2>
-                <p className="text-sm text-[#969CA5]">High-level risk posture and capture metrics</p>
+                <div className="text-xs uppercase tracking-widest text-[#636C73] font-medium mb-1">OVERVIEW</div>
+                <h2 className="text-2xl font-semibold text-[#E5E7EB] tracking-wide mb-1">Security Analysis Overview</h2>
+                <p className="text-sm text-[#8B9299]">High-level risk posture and capture metrics</p>
             </div>
 
                         {/* Top row: High-level metrics */}
             <div className="grid grid-cols-2 md:grid-cols-7 gap-4">
                 <AnalyticalCard className="col-span-2 md:col-span-2" noPadding>
                     <div className="p-4 border-b border-white/5 bg-white/[0.02]">
-                        <span className="text-xs uppercase tracking-wider text-[#969CA5] font-medium">Capture</span>
+                        <span className="text-xs uppercase tracking-wider text-[#8B9299] font-medium">Capture</span>
                     </div>
-                    <div className="p-4 font-mono text-[13px] font-medium text-[#E7E9EC] truncate" title={s.capture.filename}>{s.capture.filename}</div>
+                    <div className="p-4 font-mono text-[13px] font-medium text-[#E5E7EB] truncate" title={s.capture.filename}>{s.capture.filename}</div>
                 </AnalyticalCard>
                 <AnalyticalCard noPadding>
                     <div className="p-4 border-b border-white/5 bg-white/[0.02]">
-                        <span className="text-xs uppercase tracking-wider text-[#969CA5] font-medium">Packets</span>
+                        <span className="text-xs uppercase tracking-wider text-[#8B9299] font-medium">Packets</span>
                     </div>
-                    <div className="p-4 font-mono text-2xl font-semibold text-[#E7E9EC] truncate">{s.capture.packet_count.toLocaleString()}</div>
+                    <div className="p-4 font-mono text-2xl font-semibold text-[#E5E7EB] truncate">{s.capture.packet_count.toLocaleString()}</div>
                 </AnalyticalCard>
                 <AnalyticalCard noPadding>
                     <div className="p-4 border-b border-white/5 bg-white/[0.02]">
-                        <span className="text-xs uppercase tracking-wider text-[#969CA5] font-medium">Duration</span>
+                        <span className="text-xs uppercase tracking-wider text-[#8B9299] font-medium">Duration</span>
                     </div>
-                    <div className="p-4 font-mono text-2xl font-semibold text-[#E7E9EC] truncate">{s.capture.duration_seconds}s</div>
+                    <div className="p-4 font-mono text-2xl font-semibold text-[#E5E7EB] truncate">{s.capture.duration_seconds}s</div>
                 </AnalyticalCard>
                 <AnalyticalCard noPadding>
                     <div className="p-4 border-b border-white/5 bg-white/[0.02]">
-                        <span className="text-xs uppercase tracking-wider text-[#969CA5] font-medium">IPsec Pkts</span>
+                        <span className="text-xs uppercase tracking-wider text-[#8B9299] font-medium">IPsec Pkts</span>
                     </div>
-                    <div className="p-4 font-mono text-2xl font-semibold text-[#E7E9EC] truncate">{s.capture.ipsec_packet_count.toLocaleString()}</div>
+                    <div className="p-4 font-mono text-2xl font-semibold text-[#E5E7EB] truncate">{s.capture.ipsec_packet_count.toLocaleString()}</div>
                 </AnalyticalCard>
                 <AnalyticalCard noPadding>
                     <div className="p-4 border-b border-white/5 bg-white/[0.02]">
-                        <span className="text-xs uppercase tracking-wider text-[#969CA5] font-medium">Coverage</span>
+                        <span className="text-xs uppercase tracking-wider text-[#8B9299] font-medium">Coverage</span>
                     </div>
-                    <div className="p-4 font-mono text-2xl font-semibold text-[#E7E9EC] truncate">{s.capture.ipsec_coverage_percent}%</div>
+                    <div className="p-4 font-mono text-2xl font-semibold text-[#E5E7EB] truncate">{s.capture.ipsec_coverage_percent}%</div>
                 </AnalyticalCard>
                 <AnalyticalCard noPadding>
                     <div className="p-4 border-b border-white/5 bg-white/[0.02]">
-                        <span className="text-xs uppercase tracking-wider text-[#969CA5] font-medium">Flows</span>
+                        <span className="text-xs uppercase tracking-wider text-[#8B9299] font-medium">Flows</span>
                     </div>
-                    <div className="p-4 font-mono text-2xl font-semibold text-[#E7E9EC] truncate">{s.flow_count.toLocaleString()}</div>
+                    <div className="p-4 font-mono text-2xl font-semibold text-[#E5E7EB] truncate">{s.flow_count.toLocaleString()}</div>
                 </AnalyticalCard>
             </div>
 
@@ -116,8 +116,8 @@ export const Overview: React.FC = () => {
                             <DonutChart data={distributionData} nameKey="name" dataKey="bytes" />
                         ) : (
                             <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
-                                <span className="text-sm font-medium text-[#E7E9EC] uppercase tracking-widest mb-1">Insufficient Evidence</span>
-                                <span className="text-xs text-[#969CA5]">Additional traffic conclusions cannot be derived from this capture.</span>
+                                <span className="text-sm font-medium text-[#E5E7EB] uppercase tracking-widest mb-1">Insufficient Evidence</span>
+                                <span className="text-xs text-[#8B9299]">Additional traffic conclusions cannot be derived from this capture.</span>
                             </div>
                         )}
                     </div>
@@ -127,11 +127,11 @@ export const Overview: React.FC = () => {
                     <SectionHeader title="Security Findings" subtitle="Detected vulnerabilities and misconfigurations" />
                     <div className="flex-1 overflow-y-auto custom-scrollbar pr-2 mt-4 space-y-4">
                         {s.findings.length === 0 ? (
-                            <div className="flex flex-col items-center justify-center h-48 border border-dashed border-[#25282C] rounded-sm bg-[#111315]">
-                                <span className="text-[#E7E9EC] text-sm font-medium uppercase tracking-widest mb-1">
+                            <div className="flex flex-col items-center justify-center h-48 border border-dashed border-[#202326] rounded-sm bg-[#0D0F10]">
+                                <span className="text-[#E5E7EB] text-sm font-medium uppercase tracking-widest mb-1">
                                     {s.scenario_id === 'EX01' ? 'Insufficient Evidence' : 'No Security Findings'}
                                 </span>
-                                <span className="text-xs text-[#969CA5] text-center px-4">
+                                <span className="text-xs text-[#8B9299] text-center px-4">
                                     {s.scenario_id === 'EX01' 
                                         ? 'Security conclusions cannot be derived from this capture.' 
                                         : 'No security findings identified.'}
@@ -146,8 +146,8 @@ export const Overview: React.FC = () => {
                                             <span className="text-xs text-soc-text uppercase tracking-widest">{f.category}</span>
                                         </div>
                                     </div>
-                                    <h4 className="text-base font-semibold text-[#E7E9EC] mb-2">{f.title}</h4>
-                                    <div className="text-sm text-[#969CA5] mb-3">{f.description}</div>
+                                    <h4 className="text-base font-semibold text-[#E5E7EB] mb-2">{f.title}</h4>
+                                    <div className="text-sm text-[#8B9299] mb-3">{f.description}</div>
                                     
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 pt-4 border-t border-white/5">
                                         <div>

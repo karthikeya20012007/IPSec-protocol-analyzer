@@ -20,13 +20,13 @@ export const AnalysisPipeline: React.FC<AnalysisPipelineProps> = ({ currentStage
     const currentIndex = currentStage ? STAGES.findIndex(s => s.id === currentStage) : -1;
 
     return (
-        <div className="bg-[#111315] border border-[#25282C] rounded-sm p-6 max-w-md mx-auto w-full">
-            <div className="mb-6 pb-4 border-b border-[#25282C]">
-                <h3 className="text-sm font-semibold text-[#E7E9EC] uppercase tracking-widest mb-1">Analysis Pipeline</h3>
+        <div className="bg-[#0D0F10] border border-[#202326] rounded-sm p-6 max-w-md mx-auto w-full">
+            <div className="mb-6 pb-4 border-b border-[#202326]">
+                <h3 className="text-sm font-semibold text-[#E5E7EB] uppercase tracking-widest mb-1">Analysis Pipeline</h3>
                 {filename ? (
-                    <p className="text-xs font-mono text-[#969CA5] truncate" title={filename}>{filename}</p>
+                    <p className="text-xs font-mono text-[#8B9299] truncate" title={filename}>{filename}</p>
                 ) : (
-                    <p className="text-xs text-[#666C75]">Processing capture...</p>
+                    <p className="text-xs text-[#636C73]">Processing capture...</p>
                 )}
             </div>
 
@@ -42,13 +42,13 @@ export const AnalysisPipeline: React.FC<AnalysisPipelineProps> = ({ currentStage
                                 <div className={`
                                     flex items-center justify-center w-5 h-5 rounded-sm border text-[10px] mr-3
                                     ${isCompleted ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-400' : ''}
-                                    ${isActive ? 'bg-transparent border-[#E7E9EC] text-[#E7E9EC]' : ''}
-                                    ${isPending ? 'bg-[#0B0C0D] border-[#25282C] text-transparent' : ''}
+                                    ${isActive ? 'bg-transparent border-[#E5E7EB] text-[#E5E7EB]' : ''}
+                                    ${isPending ? 'bg-[#080909] border-[#202326] text-transparent' : ''}
                                 `}>
                                     {isCompleted && '✓'}
                                     {isActive && (
                                         <svg 
-                                            className="w-3 h-3 text-[#E7E9EC] animate-spin motion-reduce:animate-none" 
+                                            className="w-3 h-3 text-[#E5E7EB] animate-spin motion-reduce:animate-none" 
                                             xmlns="http://www.w3.org/2000/svg" 
                                             fill="none" 
                                             viewBox="0 0 24 24"
@@ -60,9 +60,9 @@ export const AnalysisPipeline: React.FC<AnalysisPipelineProps> = ({ currentStage
                                     )}
                                 </div>
                                 <span className={`text-xs uppercase tracking-widest ${
-                                    isCompleted ? 'text-[#969CA5]' :
-                                    isActive ? 'text-[#E7E9EC] font-medium' :
-                                    'text-[#666C75]'
+                                    isCompleted ? 'text-[#8B9299]' :
+                                    isActive ? 'text-[#E5E7EB] font-medium' :
+                                    'text-[#636C73]'
                                 }`}>
                                     {stage.label}
                                 </span>
@@ -70,7 +70,7 @@ export const AnalysisPipeline: React.FC<AnalysisPipelineProps> = ({ currentStage
                             
                             {/* Active stage description message */}
                             {isActive && (
-                                <div className="ml-8 mt-1 text-xs text-[#969CA5] italic">
+                                <div className="ml-8 mt-1 text-xs text-[#8B9299] italic">
                                     {stage.message}
                                     <span className="sr-only"> - In progress</span>
                                 </div>
